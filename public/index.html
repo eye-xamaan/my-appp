@@ -1,1 +1,94 @@
-hi
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09275a">
+  <meta name="description" content="सांवतगढ़ के विकास हेतु सुझाव और शिकायत दर्ज करें।">
+  <title>ग्राम पंचायत सांवतगढ़ | सुझाव और शिकायत</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">✦</span><span id="siteTitle">ग्राम पंचायत सांवतगढ़</span></div>
+  </header>
+
+  <main>
+    <section class="hero-wrap" aria-label="मुख्य पोस्टर">
+      <img id="bannerImage" class="hero-image" src="/assets/banner-candidate.jpg" alt="सांवतगढ़ विकास और जनता देवी का पोस्टर">
+    </section>
+
+    <div class="ticker" aria-label="विकास संदेश"><div class="ticker-track"><span id="sloganOne"></span><span id="sloganTwo"></span></div></div>
+
+    <section class="social-intro section-shell">
+      <p id="socialLine">पंचायत के हर अपडेट और विकास कार्यों से जुड़े रहने के लिए हमारे व्हाट्सएप और इंस्टाग्राम से जरूर जुड़ें!</p>
+      <div class="social-actions">
+        <a id="whatsappTop" class="social-btn whatsapp" href="https://wa.me/" target="_blank" rel="noopener"><span>◉</span> WhatsApp से जुड़ें</a>
+        <a id="instagramTop" class="social-btn instagram" href="https://instagram.com/" target="_blank" rel="noopener"><span>◎</span> Instagram पर जुड़ें</a>
+      </div>
+    </section>
+
+    <section class="form-section section-shell">
+      <div class="glass-card">
+        <div class="section-kicker">आपकी आवाज़ • हमारा संकल्प</div>
+        <h1 id="formHeading">सांवतगढ़ के विकास हेतु अपनी शिकायत / सुझाव दर्ज करें</h1>
+        <p class="subtext">कृपया समस्या की सही जानकारी दें ताकि उसे व्यवस्थित रूप से दर्ज किया जा सके।</p>
+        <form id="issueForm">
+          <label for="name">नाम <span class="required">*</span></label>
+          <input id="name" name="name" autocomplete="name" placeholder="अपना पूरा नाम लिखें" maxlength="120" required>
+
+          <label for="mobile">मोबाइल नंबर <span class="required">*</span></label>
+          <input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="मोबाइल नंबर" maxlength="25" required>
+
+          <label for="shortIssue">आपका सुझाव / शिकायत <span class="required">*</span></label>
+          <input id="shortIssue" name="shortIssue" placeholder="जैसे: सड़क, पानी, बिजली..." maxlength="240" required>
+
+          <label for="details">विस्तार से विवरण <span class="required">*</span></label>
+          <textarea id="details" name="details" rows="5" maxlength="5000" placeholder="विस्तार से बताएं कि कौनसी जगह क्या समस्या है, और सबसे पहले क्या काम सुनिश्चित होना चाहिए?" required></textarea>
+
+          <div class="upload-box">
+            <div><strong>📷 समस्या की फोटो अपलोड करें</strong><small>वैकल्पिक • अधिकतम 5 फोटो • 25 MB प्रति फोटो तक</small></div>
+            <div class="photo-actions"><button class="file-button" id="openCamera" type="button">📷 कैमरा खोलें</button><button class="file-button gallery-button" id="openGallery" type="button">🖼️ गैलरी से फोटो चुनें</button></div>
+            <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
+            <input id="photos" name="photos" type="file" accept="image/*" multiple hidden>
+            <div id="fileList" class="file-list">कोई फोटो नहीं चुनी गई (अधिकतम 5)</div>
+          </div>
+
+          <label class="consent-row">
+            <input id="consent" name="consent" type="checkbox">
+            <span id="consentText">हाँ, मैं श्रीमती जनता देवी (निवेदक जगफूल सिंह मीणा) को ग्राम पंचायत सांवतगढ़ के सरपंच पद एवं गाँव के विकास के लिए चुनता/चुनती हूँ।</span>
+          </label>
+          <p class="optional-note">यह checkbox वैकल्पिक है। इसे टिक करना अनिवार्य नहीं है।</p>
+
+          <button id="submitButton" class="submit-button" type="submit"><span>जमा करें</span><span aria-hidden="true">➜</span></button>
+          <p id="formStatus" class="form-status" role="status"></p>
+          <p class="privacy-note">आपकी दी गई जानकारी शिकायत/सुझाव का रिकॉर्ड रखने के लिए जमा की जाएगी।</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="manifesto-section section-shell">
+      <div class="manifesto-heading"><span class="heading-line"></span><div><span class="section-kicker">सांवतगढ़ का भविष्य</span><h2 id="manifestoHeading">हमारे संकल्प और प्राथमिकताएँ</h2></div><span class="heading-line"></span></div>
+      <div class="manifesto-card"><img id="manifestoImage" src="/assets/manifesto-19-points.jpg" alt="सांवतगढ़ के विकास हेतु 19 प्राथमिकताओं वाला संकल्प पत्र" loading="lazy"><p>पोस्टर को बड़ा करके सभी बिंदु पढ़ने के लिए फोटो पर टैप करें।</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-flower">✿</div>
+    <p class="footer-label">निवेदक</p>
+    <h2 id="proposer">जगफूल सिंह मीणा</h2>
+    <p id="proposerTitle">सेवानिवृत्त सीनियर नर्सिंग ऑफिसर, ग्रेड प्रथम</p>
+    <div class="footer-divider"></div>
+    <p class="helpline-label">हेल्पलाइन</p><a id="helpline" class="helpline" href="tel:7976099557">7976099557</a>
+    <div class="footer-social"><a id="whatsappFooter" href="https://wa.me/" aria-label="WhatsApp">◉</a><a id="instagramFooter" href="https://instagram.com/" aria-label="Instagram">◎</a></div>
+    <small>सांवतगढ़ • सेवा, सहयोग और विकास</small>
+  </footer>
+
+  <div id="thankModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="thankTitle" hidden>
+    <div class="modal-card"><div class="success-check">✓</div><h2 id="thankTitle">शुक्रिया!</h2><p id="thankMessage">आपका सुझाव सफलतापूर्वक जमा हो गया है।</p><button id="closeModal" class="submit-button" type="button">ठीक है</button></div>
+  </div>
+  <div id="imageModal" class="image-modal" hidden><button id="closeImage" aria-label="Close image">✕</button><img id="zoomImage" alt="बड़ा पोस्टर"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

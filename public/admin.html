@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09275a"><title>Admin Panel | सांवतगढ़</title><link rel="stylesheet" href="/admin.css"></head>
+<body>
+<header class="admin-header"><a href="/" class="back">← वेबसाइट</a><div><strong>सांवतगढ़ Admin</strong><small>Website control room</small></div><button id="logoutBtn" class="quiet" hidden>Logout</button></header>
+<main class="admin-main">
+<section id="loginPanel" class="panel login-panel"><div class="eyebrow">SECURE ACCESS</div><h1>Admin Login</h1><p>वेबसाइट के text, photos और submissions manage करें।</p><form id="loginForm"><label>Username<input name="username" autocomplete="username" required value="admin"></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button class="primary">Login करें</button><p id="loginError" class="error"></p></form></section>
+<div id="dashboard" hidden>
+<section class="stats-grid">
+<div class="stat"><span>कुल Visitors</span><strong id="statVisitors">0</strong></div><div class="stat"><span>कुल Submissions</span><strong id="statSubmissions">0</strong></div><div class="stat"><span>Consent ✓</span><strong id="statYes">0</strong></div><div class="stat"><span>Consent नहीं</span><strong id="statNo">0</strong></div><div class="stat"><span>फोटो वाले records</span><strong id="statPhotos">0</strong></div>
+</section>
+<section class="panel"><div class="section-head"><div><div class="eyebrow">LIVE CONTENT</div><h2>Website Text & Links</h2></div><span class="live-pill">बिना restart update</span></div>
+<form id="settingsForm" class="settings-grid">
+<label>Website Title<input name="siteTitle"></label><label>Helpline Number<input name="helpline"></label>
+<label class="wide">Slogan ticker<input name="slogan"></label><label class="wide">Social media invitation<input name="socialLine"></label>
+<label class="wide">Form heading<input name="formHeading"></label><label class="wide">Detailed issue placeholder<textarea name="detailPlaceholder" rows="2"></textarea></label>
+<label class="wide">Consent text<textarea name="consentText" rows="3"></textarea></label><label class="wide">Manifesto heading<input name="manifestoHeading"></label>
+<label>Proposer name<input name="proposer"></label><label>Proposer title<input name="proposerTitle"></label>
+<label class="wide">Thank-you popup text<textarea name="thankYouText" rows="2"></textarea></label>
+<label class="wide">WhatsApp link<input name="whatsappUrl" type="url" placeholder="https://wa.me/91..."></label><label class="wide">Instagram link<input name="instagramUrl" type="url" placeholder="https://instagram.com/username"></label>
+<div class="wide"><button class="primary">Save all text & links</button><span id="settingsStatus" class="inline-status"></span></div>
+</form></section>
+<section class="panel"><div class="eyebrow">VISUALS</div><h2>Images बदलें</h2><p class="muted">नई image चुनें और Upload दबाएँ। बदलाव अगली page load पर दिखेगा; server restart नहीं करना पड़ेगा।</p>
+<div class="image-settings">
+<div class="image-setting"><strong>Main banner</strong><img id="previewBanner" alt="Banner preview"><input type="file" id="bannerFile" accept="image/*"><button data-image="banner" class="upload-image primary">Banner upload</button></div>
+<div class="image-setting"><strong>Manifesto / संकल्प पत्र</strong><img id="previewManifesto" alt="Manifesto preview"><input type="file" id="manifestoFile" accept="image/*"><button data-image="manifesto" class="upload-image primary">Manifesto upload</button></div>
+<div class="image-setting"><strong>Background photo</strong><img id="previewBackground" alt="Background preview"><input type="file" id="backgroundFile" accept="image/*"><button data-image="background" class="upload-image primary">Background upload</button></div>
+</div><p id="imageStatus" class="inline-status"></p></section>
+<section class="panel"><div class="section-head"><div><div class="eyebrow">INBOX</div><h2>शिकायत / सुझाव records</h2></div><a href="/api/admin/export.csv" class="export-link">Export CSV ↓</a></div>
+<div class="search-row"><input id="searchInput" placeholder="नाम, मोबाइल या समस्या से खोजें"><button id="searchBtn" class="primary">Search</button><button id="refreshBtn" class="secondary">Refresh</button></div><p id="recordsCount" class="muted"></p><div id="records" class="records"></div></section>
+</div>
+</main><div id="toast" class="toast" hidden></div><script src="/admin.js" defer></script></body></html>
